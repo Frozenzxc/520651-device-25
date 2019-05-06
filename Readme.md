@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Александр Сафиев](https://up.htmlacademy.ru/htmlcss/25/user/520651).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Кан](https://htmlacademy.ru/profile/viktorkan).
 
 ---
 
