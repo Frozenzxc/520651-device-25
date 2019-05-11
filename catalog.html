@@ -8,19 +8,16 @@
 </head>
 <body>
   <header class="main-header">
-    <nav class="site-navigation">
         <a class="main-header-logo" href="index.html">
             <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов Девайс">
         </a>
         <p class="main-header-search">
-            <input type="text" name="search" placeholder="Поиск по сайту">
+            <input type="text" name="search" placeholder="Поиск по сайту" id="search">
+            <label class="visually-hidden" for="search">Поиск по сайту</label>
         </p>
         <ul class="user-navigation">
             <li class="user-navigation-item">
                 <a class="login-link" href="#">Валентин Петухов</a>
-            </li>
-            <li class="user-navigation-item visually-hidden">
-                <a class="login-link" href="#">Войти</a>
             </li>
             <li class="user-navigation-item">
                 <a class="login-link" href="#">Выйти</a>
@@ -34,6 +31,7 @@
                 <a class="purchase-options-link" href="#">Корзина</a>
             </li>
         </ul>
+      <nav class="site-navigation">
         <ul class="navigation-list">
             <li class="navigation-item">
                 <a class="navigation-link" href="catalog.html">
@@ -70,7 +68,7 @@
                 <a class="navigation-link" href="#">Контакты</a>
             </li>
         </ul>
-    </nav>
+      </nav>
   </header>
   <main class="container">
       <h1 class="page-title">Моноподы для селфи</h1>
@@ -82,20 +80,38 @@
       <section class="filter">
           <form id="filter" action="" method="post" name="filter">
               <h2 class="filter-title">Фильтр:</h2>
-              <p>Стоимость<br>
-                <input type="range" name="price" min="0" max="10000">
-              </p>
-              <p>Цвет<br>
-                  <input type="checkbox" name="color" form="filter" id="color1"><label for="color1">Черный</label><br>
-                  <input type="checkbox" name="color" form="filter" id="color2"><label for="color2">Белый</label><br>
-                  <input type="checkbox" name="color" form="filter" id="color3"><label for="color3">Синий</label><br>
-                  <input type="checkbox" name="color" form="filter" id="color4"><label for="color4">Красный</label><br>
-                  <input type="checkbox" name="color" form="filter" id="color5"><label for="color5">Розовый</label>
-              </p>
-              <p>Bluetooth<br>
-                  <input type="radio" name="bluetooth" form="filter" id="bluetooth-true"><label for="bluetooth-true">Есть</label><br>
-                  <input type="radio" name="bluetooth" form="filter" id="bluetooth-false"><label for="bluetooth-false">Нет</label>
-              </p>
+              <h3 class="filter-item-title">Стоимость</h3>
+                <p class="filter-item-price">
+                    <input type="range" name="price" min="0" max="10000" id="price">
+                    <label class="visually-hidden" for="price">Фильтр по цене</label>
+                </p>
+              <h3 class="filter-item-title">Цвет</h3>
+                <ul class="filter-color-list">
+                    <li class="filter-color-item">
+                        <input type="checkbox" name="colorBlack" form="filter" id="colorBlack"><label for="colorBlack">Черный</label>
+                    </li>
+                    <li class="filter-color-item">
+                        <input type="checkbox" name="colorWhite" form="filter" id="colorWhite"><label for="colorWhite">Белый</label>
+                    </li>
+                    <li class="filter-color-item">
+                        <input type="checkbox" name="colorBlue" form="filter" id="colorBlue"><label for="colorBlue">Синий</label>
+                    </li>
+                    <li class="filter-color-item">
+                        <input type="checkbox" name="colorRed" form="filter" id="colorRed"><label for="colorRed">Красный</label>
+                    </li>
+                    <li class="filter-color-item">
+                        <input type="checkbox" name="colorPink" form="filter" id="colorPink"><label for="colorPink">Розовый</label>
+                    </li>
+                </ul>
+              <h3 class="filter-item-title">Bluetooth</h3>
+                <ul class="filter-bluetooth-list">
+                    <li class="filter-bluetooth-item">
+                        <input type="radio" name="bluetooth" form="filter" id="bluetooth-true"><label for="bluetooth-true">Есть</label>
+                    </li>
+                    <li class="filter-bluetooth-item">
+                        <input type="radio" name="bluetooth" form="filter" id="bluetooth-false"><label for="bluetooth-false">Нет</label>
+                    </li>
+                </ul>
               <p><input type="submit" form="filter" value="Показать"></p>
           </form>
       </section>
@@ -169,9 +185,6 @@
       <ul class="footer-user-navigation">
           <li class="footer-user-navigation-item">
               <a class="footer-login-link" href="#">Валентин Петухов</a>
-          </li>
-          <li class="footer-user-navigation-item visually-hidden">
-              <a class="footer-login-link" href="#">Войти</a>
           </li>
           <li class="footer-user-navigation-item">
               <a class="footer-login-link" href="#">Выйти</a>

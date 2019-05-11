@@ -8,22 +8,16 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="site-navigation">
         <a class="main-header-logo">
           <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов Девайс">
         </a>
         <p class="main-header-search">
-          <input type="text" name="search" placeholder="Поиск по сайту">
+          <input type="text" name="search" placeholder="Поиск по сайту" id="search">
+          <label class="visually-hidden" for="search">Поиск по сайту</label>
         </p>
         <ul class="user-navigation">
-          <li class="user-navigation-item visually-hidden">
-            <a class="login-link" href="#">Профиль пользователя</a>
-          </li>
           <li class="user-navigation-item">
             <a class="login-link" href="#">Войти</a>
-          </li>
-          <li class="user-navigation-item visually-hidden">
-            <a class="login-link" href="#">Выйти</a>
           </li>
         </ul>
         <ul class="purchase-options">
@@ -34,6 +28,7 @@
             <a class="purchase-options-link" href="#">Корзина</a>
           </li>
         </ul>
+      <nav class="site-navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">
@@ -80,20 +75,20 @@
           <li class="slider-item">
             <img src="img/slider-1.jpg" width="384" height="486" alt="Фото самой длинной палки для селфи">
             <span class="slider-item-count">01</span>
-            <p class="slider-item-text">
-              <b>
+            <p class="slider-item-slogan">
               Делай селфи,<br>
               как Бен Стиллер!
-              </b>
+            </p>
+            <p class="slider-item-text">
               Самая длинная палка для селфи доступна в нашем магазине.
               Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
             </p>
             <a class="slider-item-more" href="#">Подробнее</a>
             <table class="slider-item-benefits">
               <tr class="benefits-title">
-                <td>Длина палки</td>
-                <td>Вес палки</td>
-                <td>Материал</td>
+                <th>Длина палки</th>
+                <th>Вес палки</th>
+                <th>Материал</th>
               </tr>
               <tr class="benefits-value">
                 <td>8,5 м</td>
@@ -105,18 +100,18 @@
           <li class="slider-item">
             <img src="img/slider-2.jpg" width="345" height="485" alt="Фото мотивирующего фитнес-браслета">
             <span class="slider-item-count">02</span>
-            <p class="slider-item-text">
-              <b>
+            <p class="slider-item-slogan">
                 Худеем<br>
                 правильно!
-              </b>
+            </p>
+            <p class="slider-item-text">
               Мотивирующие фитнес-браслеты помогут найти в себе силы
               не пропускать занятия и соблюдать диету.
             </p>
             <a class="slider-item-more" href="#">Подробнее</a>
             <table class="slider-item-benefits">
               <tr class="benefits-title">
-                <td>Без подзарядки</td>
+                <th>Без подзарядки</th>
               </tr>
               <tr class="benefits-value">
                 <td>48 часов</td>
@@ -126,19 +121,19 @@
           <li class="slider-item">
             <img src="img/slider-3.jpg" width="526" height="334" alt="Фото квадрокоптера">
             <span class="slider-item-count">03</span>
-            <p class="slider-item-text">
-              <b>
+            <p class="slider-item-slogan">
                 Порхает как бабочка,<br>
                 жалит как пчела!
-              </b>
+            </p>
+            <p class="slider-item-text">
               Этот обычный, на первый взгляд, квадрокоптер оснащен
               мощным лазером, замаскированным под стандартную камеру.
             </p>
             <a class="slider-item-more" href="#">Подробнее</a>
             <table class="slider-item-benefits">
               <tr class="benefits-title">
-                <td>Дальность полета</td>
-                <td>Радиус поражения</td>
+                <th>Дальность полета</th>
+                <th>Радиус поражения</th>
               </tr>
               <tr class="benefits-value">
                 <td>800 м</td>
@@ -163,33 +158,51 @@
         <h2 class="visually-hidden">Категории товаров</h2>
         <ul class="main-categories-list">
           <li class="main-categories-item">
-            <a class="main-categories-link" href="#">
-              Виртуальная реальность
+            <h3 class="main-categories-title">
+              <a class="main-categories-link" href="#">Виртуальная реальность</a>
+            </h3>
+            <a class="main-categories-icon"  href="#">
+              <img src="img/popular-1.svg" width="97" height="55" alt="Иконка виртуальной реальности">
             </a>
           </li>
           <li class="main-categories-item">
-            <a class="main-categories-link" href="#">
-              Моноподы для селфи
+            <h3 class="main-categories-title">
+              <a class="main-categories-link" href="#">Моноподы для селфи</a>
+            </h3>
+            <a class="main-categories-icon"  href="#">
+              <img src="img/popular-2.svg" width="86" height="117" alt="Иконка моноподы для селфи">
             </a>
           </li>
           <li class="main-categories-item">
-            <a class="main-categories-link" href="#">
-              Экшн-камеры
+            <h3 class="main-categories-title">
+              <a class="main-categories-link" href="#">Экшн-камеры</a>
+            </h3>
+            <a class="main-categories-icon"  href="#">
+              <img src="img/popular-3.svg" width="71" height="87" alt="Иконка экшн-камер">
             </a>
           </li>
           <li class="main-categories-item">
-            <a class="main-categories-link" href="#">
-              Фитнес-браслеты
+            <h3 class="main-categories-title">
+              <a class="main-categories-link" href="#">Фитнес-браслеты</a>
+            </h3>
+            <a class="main-categories-icon" href="#">
+              <img src="img/popular-4.svg" width="107" height="65" alt="Иконка фитнес-браслетов">
             </a>
           </li>
           <li class="main-categories-item">
-            <a class="main-categories-link" href="#">
-              Умные часы
+            <h3 class="main-categories-title">
+              <a class="main-categories-link" href="#">Умные часы</a>
+            </h3>
+            <a class="main-categories-icon" href="#">
+              <img src="img/popular-5.svg" width="56" height="98" alt="Иконка умных часов">
             </a>
           </li>
           <li class="main-categories-item">
-            <a class="main-categories-link" href="#">
-              Квадрокоптеры
+            <h3 class="main-categories-title">
+              <a class="main-categories-link" href="#">Квадрокоптеры</a>
+            </h3>
+            <a class="main-categories-icon" href="#">
+              <img src="img/popular-6.svg" width="132" height="69" alt="Иконка квадрокоптеров">
             </a>
           </li>
         </ul>
@@ -198,13 +211,13 @@
         <h2 class="visually-hidden">Услуги</h2>
           <ul class="main-services-list">
             <li class="main-services-item">
-              <a class="main-services-link">Доставка</a>
+              <button class="main-services-link">Доставка</button>
             </li>
             <li class="main-services-item">
-              <a class="main-services-link">Гарантия</a>
+              <button class="main-services-link">Гарантия</button>
             </li>
             <li class="main-services-item">
-              <a class="main-services-link">Кредит</a>
+              <button class="main-services-link">Кредит</button>
             </li>
           </ul>
           <ul class="services-description">
@@ -236,22 +249,22 @@
         <ul class="main-partners-list">
           <li class="main-partners-item">
             <a class="main-partners-link">
-              dji
+              <img src="img/logo-1.jpg" width="260" height="100" alt="Логотип фирмы dji">
             </a>
           </li>
           <li class="main-partners-item">
             <a class="main-partners-link">
-              spgadgets
+              <img src="img/logo-2.jpg" width="260" height="100" alt="Логотип фирмы spgadgets">
             </a>
           </li>
           <li class="main-partners-item">
             <a class="main-partners-link">
-              gopro
+              <img src="img/logo-3.jpg" width="260" height="100" alt="Логотип фирмы gopro">
             </a>
           </li>
           <li class="main-partners-item">
             <a class="main-partners-link">
-              vive
+              <img src="img/logo-4.jpg" width="260" height="100" alt="Логотип фирмы vive">
             </a>
           </li>
         </ul>
@@ -259,9 +272,11 @@
       <section class="main-info">
         <h2 class="main-info-title title">О нас</h2>
         <p class="main-info-text">
-          Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.<br>
-          Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+          Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
         </p>
+        <p class="main-info-delivery">
+          Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+      </p>
         <ul class="main-info-list">
           <li class="main-info-item">Деловые Линии</li>
           <li class="main-info-item">Автотрейдинг</li>
@@ -285,14 +300,8 @@
         <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов Девайс">
       </a>
       <ul class="footer-user-navigation">
-        <li class="footer-user-navigation-item visually-hidden">
-          <a class="footer-login-link" href="#">Профиль пользователя</a>
-        </li>
         <li class="footer-user-navigation-item">
           <a class="footer-login-link" href="#">Войти</a>
-        </li>
-        <li class="footer-user-navigation-item visually-hidden">
-          <a class="footer-login-link" href="#">Выйти</a>
         </li>
       </ul>
       <ul class="footer-purchase-options">
