@@ -9,11 +9,12 @@
 <body>
   <header class="main-header">
         <a class="main-header-logo" href="index.html">
-            <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов Девайс">
+            <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов Девайс">
         </a>
         <p class="main-header-search">
             <input type="text" name="search" placeholder="Поиск по сайту" id="search">
             <label class="visually-hidden" for="search">Поиск по сайту</label>
+            <button class="search-button">Найти</button>
         </p>
         <ul class="user-navigation">
             <li class="user-navigation-item">
@@ -82,34 +83,41 @@
               <h2 class="filter-title">Фильтр:</h2>
               <h3 class="filter-item-title">Стоимость</h3>
                 <p class="filter-item-price">
-                    <input type="range" name="price" min="0" max="10000" id="price">
+                    <input type="range" name="price" min="0" max="10000" step="100" id="price">
                     <label class="visually-hidden" for="price">Фильтр по цене</label>
                 </p>
               <h3 class="filter-item-title">Цвет</h3>
                 <ul class="filter-color-list">
                     <li class="filter-color-item">
-                        <input type="checkbox" name="colorBlack" form="filter" id="colorBlack"><label for="colorBlack">Черный</label>
+                        <input type="checkbox" name="colorBlack" form="filter" id="colorBlack">
+                        <label for="colorBlack">Черный</label>
                     </li>
                     <li class="filter-color-item">
-                        <input type="checkbox" name="colorWhite" form="filter" id="colorWhite"><label for="colorWhite">Белый</label>
+                        <input type="checkbox" name="colorWhite" form="filter" id="colorWhite">
+                        <label for="colorWhite">Белый</label>
                     </li>
                     <li class="filter-color-item">
-                        <input type="checkbox" name="colorBlue" form="filter" id="colorBlue"><label for="colorBlue">Синий</label>
+                        <input type="checkbox" name="colorBlue" form="filter" id="colorBlue">
+                        <label for="colorBlue">Синий</label>
                     </li>
                     <li class="filter-color-item">
-                        <input type="checkbox" name="colorRed" form="filter" id="colorRed"><label for="colorRed">Красный</label>
+                        <input type="checkbox" name="colorRed" form="filter" id="colorRed">
+                        <label for="colorRed">Красный</label>
                     </li>
                     <li class="filter-color-item">
-                        <input type="checkbox" name="colorPink" form="filter" id="colorPink"><label for="colorPink">Розовый</label>
+                        <input type="checkbox" name="colorPink" form="filter" id="colorPink">
+                        <label for="colorPink">Розовый</label>
                     </li>
                 </ul>
               <h3 class="filter-item-title">Bluetooth</h3>
                 <ul class="filter-bluetooth-list">
                     <li class="filter-bluetooth-item">
-                        <input type="radio" name="bluetooth" form="filter" id="bluetooth-true"><label for="bluetooth-true">Есть</label>
+                        <input type="radio" name="bluetooth" form="filter" id="bluetooth-true">
+                        <label for="bluetooth-true">Есть</label>
                     </li>
                     <li class="filter-bluetooth-item">
-                        <input type="radio" name="bluetooth" form="filter" id="bluetooth-false"><label for="bluetooth-false">Нет</label>
+                        <input type="radio" name="bluetooth" form="filter" id="bluetooth-false">
+                        <label for="bluetooth-false">Нет</label>
                     </li>
                 </ul>
               <p><input type="submit" form="filter" value="Показать"></p>
@@ -123,8 +131,16 @@
               <li class="sort-item"><a class="sort-link">По популярности</a></li>
           </ul>
           <ul class="sort-priority">
-              <li class="sort-priority-item"><a class="priority-link">Возрастание</a></li>
-              <li class="sort-priority-item"><a class="priority-link priority-active">Убывание</a></li>
+              <li class="sort-priority-item">
+                  <button class="priority-btn">
+                    <img src="img/icon-up-dir.svg" width="11" height="10" alt="Сортировка по возрастанию">
+                  </button>
+              </li>
+              <li class="sort-priority-item">
+                  <button class="priority-btn priority-active">
+                      <img src="img/icon-down-dir.svg" width="11" height="10" alt="Сортировка по убыванию">
+                  </button>
+              </li>
           </ul>
       </section>
       <section class="page-catalog">
@@ -180,7 +196,7 @@
   </main>
   <footer class="site-footer">
       <a class="site-footer-logo" href="#">
-          <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов Девайс">
+          <img src="img/logofooter.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов Девайс">
       </a>
       <ul class="footer-user-navigation">
           <li class="footer-user-navigation-item">
@@ -216,11 +232,19 @@
           Тел.: +7 (495) 495-95-95
       </p>
       <ul class="footer-socials">
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-          <li><a class="social-button" href="#">Твиттер</a></li>
+          <li><a class="social-button" href="#">
+              <img src="img/fb.svg" width="32" height="32" alt="Фейсбук">
+          </a></li>
+          <li><a class="social-button" href="#">
+              <img src="img/instagram.svg" width="32" height="32" alt="Инстаграм">
+          </a></li>
+          <li><a class="social-button" href="#">
+              <img src="img/twitter.svg" width="32" height="32" alt="Твиттер">
+          </a></li>
       </ul>
-      <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss">Htmlacademy</a>
+      <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/logo-html.svg" width="27" height="34" alt="Htmlacademy">
+      </a>
   </footer>
 </body>
 </html>

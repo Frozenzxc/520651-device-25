@@ -7,7 +7,7 @@
 }
 
 @font-face {
-      font-family: "Open Sans Light";
+      font-family: "Open Sans";
       src: url("../fonts/opensanslight.woff2") format('woff2'),
       url("../fonts/opensanslight.woff") format('woff');
       font-weight: 300;
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-    font-family: "Gilroy ExtraBold";
+    font-family: "Gilroy";
     src: url("../fonts/gilroyextrabold.woff2") format('woff2'),
     url("../fonts/gilroyextrabold.woff") format('woff');
     font-weight: 800;
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-    font-family: "Gilroy Light";
+    font-family: "Gilroy";
     src: url("../fonts/gilroylight.woff2") format('woff2'),
     url("../fonts/gilroylight.woff") format('woff');
     font-weight: 300;
@@ -34,7 +34,7 @@
     box-sizing: border-box;
     position: relative;
     outline: none;
-    font-family: "Open Sans Light", "Arial", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
