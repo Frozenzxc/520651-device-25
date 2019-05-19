@@ -9,12 +9,12 @@
 <body>
   <header class="main-header">
         <a class="main-header-logo" href="index.html">
-            <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов Девайс">
+            <img src="img/logo-device.svg" width="163" height="35" alt="Переход на главную страницу интернет-магазина гаджетов Девайс">
         </a>
         <p class="main-header-search">
             <input type="text" name="search" placeholder="Поиск по сайту" id="search">
             <label class="visually-hidden" for="search">Поиск по сайту</label>
-            <button class="search-button">Найти</button>
+            <button class="search-button" type="button">Найти</button>
         </p>
         <ul class="user-navigation">
             <li class="user-navigation-item">
@@ -79,11 +79,11 @@
           <li class="breadcrumbs-item breadcrumbs-current">Моноподы для селфи</li>
       </ul>
       <section class="filter">
-          <form id="filter" action="" method="post" name="filter">
+          <form id="filter" action="https://echo.htmlacademy.ru" method="post" name="filter">
               <h2 class="filter-title">Фильтр:</h2>
               <h3 class="filter-item-title">Стоимость</h3>
                 <p class="filter-item-price">
-                    <input type="range" name="price" min="0" max="10000" step="100" id="price">
+                    <input type="range" name="price" min="0" max="10000" step="100" id="price" form="filter">
                     <label class="visually-hidden" for="price">Фильтр по цене</label>
                 </p>
               <h3 class="filter-item-title">Цвет</h3>
@@ -120,19 +120,19 @@
                         <label for="bluetooth-false">Нет</label>
                     </li>
                 </ul>
-              <p><input type="submit" form="filter" value="Показать"></p>
+              <button class="filter-button button" type="submit">Показать</button>
           </form>
       </section>
       <section class="sort">
           <h2 class="sort-title">Сортировка:</h2>
           <ul class="sort-list">
-              <li class="sort-item"><a class="sort-link sort-active">По цене</a></li>
-              <li class="sort-item"><a class="sort-link">По типу</a></li>
-              <li class="sort-item"><a class="sort-link">По популярности</a></li>
+              <li class="sort-item"><a class="sort-link sort-active" aria-label="Сортировка по цене">По цене</a></li>
+              <li class="sort-item"><a class="sort-link" aria-label="Сортировка по типу">По типу</a></li>
+              <li class="sort-item"><a class="sort-link" aria-label="Соритровка по популярности">По популярности</a></li>
           </ul>
           <ul class="sort-priority">
-              <li class="sort-priority-item"><a class="priority-link">Возрастание</a></li>
-              <li class="sort-priority-item"><a class="priority-link priority-active">Убывание</a></li>
+              <li class="sort-priority-item"><a class="priority-link" aria-label="Сортировка по позрастанию">Возрастание</a></li>
+              <li class="sort-priority-item"><a class="priority-link priority-active" aria-label="Сортировка по убыванию">Убывание</a></li>
           </ul>
       </section>
       <section class="page-catalog">
@@ -169,19 +169,19 @@
           </ul>
           <ul class="pagination-list">
               <li class="pagintaion-item">
-                  <a class="pagination-link pagination-link-prev" href="#">Назад</a>
+                  <a class="pagination-link pagination-link-prev" href="#" aria-label="Вернуться на одну страницу назад">Назад</a>
               </li>
               <li class="pagintaion-item">
-                  <a class="pagination-link pagination-link-current">1</a>
+                  <a class="pagination-link pagination-link-current" aria-label="Страница номер 1">1</a>
               </li>
               <li class="pagintaion-item">
-                  <a class="pagination-link" href="#">2</a>
+                  <a class="pagination-link" href="#" aria-label="Страница номер 2">2</a>
               </li>
               <li class="pagintaion-item">
-                  <a class="pagination-link" href="#">3</a>
+                  <a class="pagination-link" href="#" aria-label="Страница номер 3">3</a>
               </li>
               <li class="pagintaion-item">
-                  <a class="pagination-link pagination-link-next" href="#">Вперед</a>
+                  <a class="pagination-link pagination-link-next" href="#" aria-label="Перейти на одну страницу вперед">Вперед</a>
               </li>
           </ul>
       </section>
@@ -224,9 +224,9 @@
           Тел.: +7 (495) 495-95-95
       </p>
       <ul class="footer-socials">
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-          <li><a class="social-button" href="#">Твиттер</a></li>
+          <li><a class="social-button" href="#" aria-label="Магазин Девайс на фейсбуке">Фейсбук</a></li>
+          <li><a class="social-button" href="#" aria-label="Магазин Девайс в инстаграме">Инстаграм</a></li>
+          <li><a class="social-button" href="#" aria-label="Магазин Девайс в твиттере">Твиттер</a></li>
       </ul>
       <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/logo-html.svg" width="27" height="34" alt="Htmlacademy">
