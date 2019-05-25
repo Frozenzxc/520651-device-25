@@ -78,7 +78,7 @@ a {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
-    padding: 55px 60px 0 60px;
+    padding: 45px 60px 165px 60px;
 
     background-color: #f7e296;
 }
@@ -86,15 +86,22 @@ a {
 .user-navigation-wrapper {
     display: flex;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .main-header-search {
     display: flex;
-    margin-right: 100px;
+    align-items: center;
+    margin: 0;
+
+    width: 440px;
 }
 
-.main-header-search input {
-    padding: 5px 155px 5px 21px;
+.main-header-search input[type="search"] {
+    display: block;
+    padding: 5px 0 5px 21px;
+
+    width: 355px;
 
     color: rgba(0, 0, 0, 0.3);
 
@@ -103,11 +110,7 @@ a {
 
 }
 
-.main-header-search input[type="search"]:hover {
-    color: rgba(0, 0, 0, 0.6);
-}
-
-.main-header-search input[type="search"]:focus {
+input[type="search"].search-input:focus {
     padding-bottom: 3px;
 
     color: rgba(0, 0, 0, 1);
@@ -117,7 +120,24 @@ a {
     border-bottom: 2px solid #000000;
 }
 
+/*.main-header-search::before {
+    position: absolute;
+    top: 69px;
+    left: 91px;
+
+    content: "Поиск по сайту";
+
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.main-header-search::before:hover{
+    color: rgba(0, 0, 0, 0.6);
+}
+*/
+
 .search-button {
+    display: block;
+
     padding: 8px 19px;
 
     font: inherit;
@@ -139,30 +159,36 @@ a {
 }
 
 .search-button:active {
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #000000;
+}
+
+.main-header-search:focus .search-button {
+    display: block;
 }
 
 .user-navigation {
     list-style: none;
-    margin: 0;
+    margin: 0 200px 0 auto;
     padding: 0;
-    margin-right: 200px;
 }
 
 .login-link {
     padding-left: 27px;
     padding-right: 11px;
 
-    color: rgba(0, 0, 0, 1)
+    color: rgba(0, 0, 0, 1);
 }
 
 .login-link:hover,
 .login-link:focus {
-    color: rgba(0, 0, 0, 0.6)
+    outline: none;
+
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .login-link:active {
-    color: rgba(0, 0, 0, 0.3)
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .purchase-options {
@@ -170,7 +196,7 @@ a {
     align-items: center;
 
     list-style: none;
-    margin: 0;
+    margin: 0 0 0 auto;
     padding: 0;
 }
 
@@ -178,21 +204,23 @@ a {
     padding-left: 27px;
     padding-right: 11px;
 
-    color: rgba(0, 0, 0, 1)
+    color: rgba(0, 0, 0, 1);
 }
 
 .purchase-options-link:hover,
 .purchase-options-link:focus {
-    color: rgba(0, 0, 0, 0.6)
+    outline: none;
+
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .purchase-options-link:active {
-    color: rgba(0, 0, 0, 0.3)
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .navigation-list {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     list-style: none;
     margin: 0;
@@ -200,23 +228,85 @@ a {
 }
 
 .navigation-link {
+    display: block;
+
     font-family: "Gilroy", "Arial", sans-serif ;
     font-weight: 800;
     font-size: 18px;
     line-height: 24px;
     color: rgba(0, 0, 0, 1);
     text-transform: uppercase;
+}
 
+.navigation-item:nth-child(1) .navigation-link {
+    padding-right: 40px;
+}
+
+.navigation-item:nth-child(1) {
+    margin-right: 280px;
+}
+
+.navigation-item:nth-child(2) {
+    margin-right: 36px;
+}
+
+.navigation-item:nth-child(4) {
+    margin-left: auto;
+}
+
+.navigation-link:hover,
+.navigation-link:focus {
+    outline: none;
+
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.navigation-link:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .dropdown-list {
+    position: absolute;
     display: none;
+    justify-content: space-between;
+
+    list-style: none;
+    margin: 0;
+    padding: 10px 0 0 0;
+
+    background-color: #f7e296;
+}
+
+.dropdown-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 200px;
 
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.navigation-link:nth-child(1) {
-    padding-right: 40px;
+.dropdown-link {
+    line-height: 36px;
+    color: rgba(0, 0, 0, 1);
 }
+
+.dropdown-link:hover,
+.dropdown-link:focus {
+    outline: none;
+
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.dropdown-link:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.navigation-item:nth-child(1):hover .dropdown-list,
+.navigation-item:nth-child(1):focus .dropdown-list {
+    display: flex;
+}
+
