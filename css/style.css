@@ -103,11 +103,22 @@ a {
 
     width: 355px;
 
-    color: rgba(0, 0, 0, 0.3);
+    font: inherit;
 
     border: none;
     background-color: #f7e296;
+}
 
+.main-header-search input[type="search"]::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.main-header-search input[type="search"]:hover::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.main-header-search input[type="search"]:focus::placeholder {
+    color: rgba(0, 0, 0, 1);
 }
 
 input[type="search"].search-input:focus {
@@ -117,27 +128,11 @@ input[type="search"].search-input:focus {
 
     outline: none;
     border: none;
-    border-bottom: 2px solid #000000;
 }
-
-/*.main-header-search::before {
-    position: absolute;
-    top: 69px;
-    left: 91px;
-
-    content: "Поиск по сайту";
-
-    color: rgba(0, 0, 0, 0.3);
-}
-
-.main-header-search::before:hover{
-    color: rgba(0, 0, 0, 0.6);
-}
-*/
 
 .search-button {
-    display: block;
-
+    position: relative;
+    opacity: 0;
     padding: 8px 19px;
 
     font: inherit;
@@ -153,6 +148,7 @@ input[type="search"].search-input:focus {
 .search-button:hover,
 .search-button:focus {
     color: #ffffff;
+    opacity: 1;
 
     outline: none;
     background-color: #000000;
@@ -163,10 +159,21 @@ input[type="search"].search-input:focus {
     background-color: #000000;
 }
 
-.main-header-search:focus .search-button {
-    display: block;
+input[type="search"]:focus+.search-button {
+    opacity: 1;
 }
 
+.search-button::before {
+    position: absolute;
+    top: 45px;
+    left: -357px;
+
+    content: '';
+    height: 2px;
+    width: 355px;
+
+    background-color: #000000;
+}
 .user-navigation {
     list-style: none;
     margin: 0 200px 0 auto;
@@ -202,7 +209,6 @@ input[type="search"].search-input:focus {
 
 .purchase-options-link {
     padding-left: 27px;
-    padding-right: 11px;
 
     color: rgba(0, 0, 0, 1);
 }
@@ -233,6 +239,7 @@ input[type="search"].search-input:focus {
     font-family: "Gilroy", "Arial", sans-serif ;
     font-weight: 800;
     font-size: 18px;
+    letter-spacing: 4px;
     line-height: 24px;
     color: rgba(0, 0, 0, 1);
     text-transform: uppercase;
@@ -310,3 +317,205 @@ input[type="search"].search-input:focus {
     display: flex;
 }
 
+.container {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.slider-item:nth-child(2) {
+    display: none;
+}
+
+.slider-item:nth-child(3) {
+    display: none;
+}
+
+.promo-slider {
+    position: relative;
+    padding-bottom: 480px;
+}
+
+.slider-list {
+    position: absolute;
+    top: -130px;
+
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.slider-wrapper {
+    margin-top: 85px;
+    margin-left: 125px;
+}
+
+.slider-item {
+    display:  flex;
+    padding: 0 0 0 80px;
+}
+
+.slider-item-slogan {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 47px;
+    line-height: 56px;
+    font-weight: 800;
+
+    margin: 0;
+}
+
+.slider-item-text {
+    margin: 28px 0 55px 0;
+
+    color: #464646;
+}
+
+.slider-item-more {
+    position: relative;
+    padding: 11px 44px;
+
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: rgba(0, 0, 0, 1);
+
+    outline: none;
+}
+
+.slider-item-more::before {
+    position: absolute;
+    top: 18px;
+    right: 4px;
+    z-index: -10;
+
+    content: '';
+    width: 220px;
+    height: 8px;
+
+    background-color: #f0c52e;
+}
+
+.slider-item-more:hover,
+.slider-item-more:focus {
+    background-color: #f0c52e;
+}
+
+.slider-item-more:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.slider-item-benefits {
+    margin-top: 30px;
+}
+
+.slider-item-benefits tbody{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.benefits-title {
+    font-size: 13px;
+    line-height: 20px;
+    color: #464646;
+}
+
+.slider-item-benefits tr {
+    display: flex;
+}
+
+.benefits-title th {
+    margin-right: 80px;
+    padding: 0;
+
+    font-weight: 300;
+}
+
+.benefits-value {
+    margin-bottom: 14px;
+
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 300;
+}
+
+.benefits-value td {
+    padding: 0;
+    margin-right: 77px;
+}
+
+.benefits-value td:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.slider-item-count {
+    position: absolute;
+    right: 60px;
+    top: -8px;
+
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 179.2px;
+    line-height: 179.2px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.slider-counter {
+    position: absolute;
+    display: flex;
+    bottom: 245px;
+    right: 100px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    outline: none;
+}
+
+.counter-item {
+    margin-right: 21px;
+}
+
+.counter-item:nth-last-child(1) {
+    margin: 0
+}
+
+.counter-btn {
+    position: relative;
+
+    font-size: 0;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+
+    border: 1px solid #000000;
+    border-radius: 6px;
+
+    outline: none;
+    background-color: #ffffff;
+}
+
+.counter-btn-active {
+    outline: none;
+}
+
+.counter-btn-active::before {
+    position: absolute;
+    content: '';
+    bottom: 2px;
+    right: 2px;
+
+    font-size: 0;
+    width: 6px;
+    height: 6px;
+    padding: 0;
+
+    border: 1px solid #000000;
+    border-radius: 3px;
+
+    background-color: #ffffff;
+}
