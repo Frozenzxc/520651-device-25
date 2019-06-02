@@ -21,7 +21,7 @@
             <div class="user-navigation-container">
         <ul class="user-navigation">
           <li class="user-navigation-item">
-            <a class="login-link" href="#">Войти</a>
+            <a class="user-navigation-link" href="#">Войти</a>
           </li>
         </ul>
         <ul class="purchase-options">
@@ -301,10 +301,10 @@
         <p class="main-contacts-text">
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
-        <a class="main-contacts-map" href="#">
+        <a class="main-contacts-map" id="modal-map-open" href="#modal-map">
           <img src="img/map.png" width="560" height="222" alt="Карта">
         </a>
-        <a class="main-contacts-link button" href="#">Напишите нам</a>
+        <a class="main-contacts-link button" id="modal-letter-open" href="#modal-letter">Напишите нам</a>
       </section>
         </div>
     </main>
@@ -368,40 +368,39 @@
             </div>
         </div>
     </footer>
-  <section class="modal-letter">
+  <section class="modal-letter modal modal-close" id="modal-letter">
     <h2 class="visually-hidden">Форма обратной связи</h2>
-    <form  id="modal-letter" method="post" action="https://echo.htmlacademy.ru" name="modal-letter">
+    <form  id="modal-letter-form" class="modal-letter-form" method="post" action="https://echo.htmlacademy.ru" name="modal-letter">
       <ul class="modal-letter-list">
-        <li>
+        <li class="modal-letter-item">
           <label for="modal-name">Ваше имя:</label>
-          <p>
             <input type="text" placeholder="Имя Фамилия" id="modal-name" class="modal-name" form="modal-letter" name="modal-name">
-          </p>
         </li>
-        <li>
+        <li class="modal-letter-item">
           <label for="modal-email">Ваше e-mail:</label>
-          <p>
             <input type="email" placeholder="email@example.com" id="modal-email" class="modal-email" form="modal-letter" name="modal-email">
-          </p>
         </li>
-        <li>
-           <label for="modal-cover-letter">Ваше имя:</label>
-         <p>
-           <textarea placeholder="В свободной форме" id="modal-cover-letter" class="modal-cover-letter" rows="7" cols="100" form="modal-letter" name="modal-cover-letter">
-           </textarea>
-         </p>
+        <li class="modal-letter-item">
+           <label for="modal-cover-letter">Текст письма:</label>
+           <textarea placeholder="В свободной форме" id="modal-cover-letter" class="modal-cover-letter" rows="7" cols="100" form="modal-letter" name="modal-cover-letter"></textarea>
         </li>
       </ul>
-      <button class="modal-letter-button button" type="submit" form="modal-letter">Отправить</button>
+      <button class="button modal-letter-button" type="submit" form="modal-letter">Отправить</button>
     </form>
-    <button class="button-modal-close modal-close" type="button" aria-label="Закрыть форму обратной связи">Закрыть</button>
+    <button class="modal-close-button" id="modal-letter-close" type="button" aria-label="Закрыть форму обратной связи">
+        <span class="visually-hidden">Закрыть</span>
+    </button>
   </section>
-  <section class="modal-map">
+  <section class="modal-map modal modal-close" id="modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <p>
       <img src="img/map-modal.jpg" width="994" height="593" alt="Офис компании по адресу г. Москва, ул. Строителей, 15">
     </p>
-    <button class="button-modal-close modal-close" type="button" aria-label="Закрыть форму обратной связи">Закрыть</button>
+    <button class="modal-close-button" id="modal-map-close" type="button" aria-label="Закрыть форму обратной связи">
+        <span class="visually-hidden">Закрыть</span>
+    </button>
   </section>
+    <div class="modal-overlay modal-close" id="modal-overlay"></div>
+  <script src="js/script.js"></script>
   </body>
 </html>
