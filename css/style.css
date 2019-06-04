@@ -120,7 +120,7 @@ img {
 
 .main-header-search input[type="search"] {
     display: block;
-    padding: 5px 0 5px 21px;
+    padding: 5px 0 14px 21px;
 
     width: 355px;
 
@@ -143,11 +143,11 @@ img {
 }
 
 input[type="search"].search-input:focus {
-    padding-bottom: 3px;
+    padding-bottom: 12px;
 
     color: rgba(0, 0, 0, 1);
 
-    border: none;
+    border-bottom: 2px solid #000000;
 }
 
 .search-button {
@@ -180,18 +180,6 @@ input[type="search"].search-input:focus {
 
 input[type="search"]:focus+.search-button {
     opacity: 1;
-}
-
-.search-button::before {
-    position: absolute;
-    top: 45px;
-    left: -357px;
-
-    content: '';
-    height: 2px;
-    width: 355px;
-
-    background-color: #000000;
 }
 
 .user-navigation-container {
@@ -789,7 +777,7 @@ input[type="search"]:focus+.search-button {
     top: 100px;
 
     margin: 0 auto;
-    width: 100vw;
+    width: 100%;
     height: 290px;
     z-index: -20;
 
@@ -1588,17 +1576,68 @@ input[type="search"]:focus+.search-button {
 }
 
 .filter-color-item label {
+    position: relative;
     padding-left: 40px;
 
+    cursor: pointer;
     line-height: 40px;
 }
 
-.filter-checkbox:disabled+label {
+.custom-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 23px;
+    height: 23px;
+
+    border: 2px solid #000000;
+    border-radius: 2px;
+    background-color: transparent;
+}
+
+.filter-checkbox:checked + label .custom-checkbox::before {
+    content: "";
+
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    z-index: 2;
+
+    transform: rotate(-45deg);
+    width: 4px;
+    height: 12px;
+
+    background-color: #000000;
+}
+
+.filter-checkbox:checked + label .custom-checkbox::after {
+    content: "";
+    box-sizing: content-box;
+
+    position: absolute;
+    top: -4px;
+    right: -1px;
+    z-index: 1;
+
+    transform: rotate(45deg);
+    width: 4px;
+    height: 20px;
+
+    border: 1px solid #ffffff;
+    background-color: #000000;
+}
+
+.filter-checkbox:disabled + label {
     opacity: 0.25;
 }
 
-.filter-checkbox:hover+label .custom-checkbox{
+.filter-checkbox:hover + label .custom-checkbox{
     opacity: 0.6;
+}
+
+.filter-checkbox:active + label {
+    opacity: 1;
 }
 
 .filter-bluetooth-list {
@@ -1608,18 +1647,48 @@ input[type="search"]:focus+.search-button {
 }
 
 .filter-bluetooth-item label {
+    position: relative;
+
     padding-left: 40px;
 
     line-height: 40px;
 }
 
-.filter-radio:disabled+label {
+.custom-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 25px;
+    height: 25px;
+
+    border: 4px solid #000000;
+    border-radius: 25px;
+    background-color: transparent;
+}
+
+.filter-radio:checked + label .custom-radio::before {
+    content: "";
+
+    position: absolute;
+    top: 4px;
+    left: 4px;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 9px;
+    background-color: #000000;
+}
+
+.filter-radio:disabled + label {
     opacity: 0.25;
 }
 
-.filter-checkbox:hover+label .custom-checkbox {
+.filter-radio:hover + label {
     opacity: 0.6;
 }
+
 
 .filter-button {
     position: relative;
@@ -1736,6 +1805,8 @@ input[type="search"]:focus+.search-button {
 }
 
 .catalog-item {
+    position: relative;
+
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -1782,10 +1853,10 @@ input[type="search"]:focus+.search-button {
     display: none;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+
 
     width: 100%;
-    height: 100%;
+    height: 380px;
     position: absolute;
     top: 0;
     left: 0;
@@ -1797,10 +1868,11 @@ input[type="search"]:focus+.search-button {
     position: relative;
     display: block;
     z-index: 0;
+    margin-top: 170px;
     margin-bottom: 20px;
 
     width: 200px;
-
+    text-align: center;
     cursor: pointer;
     border: none;
     background: none;
@@ -1810,6 +1882,7 @@ input[type="search"]:focus+.search-button {
     font: inherit;
     opacity: 0.5;
 
+    color: #000000;
     cursor: pointer;
     border: none;
     background: none;
@@ -1824,8 +1897,8 @@ input[type="search"]:focus+.search-button {
     opacity: 0.2;
 }
 
-.catalog-item-image:hover .catalog-item-active,
-.catalog-item-image:focus .catalog-item-active {
+.catalog-item:hover .catalog-item-active,
+.catalog-item:focus .catalog-item-active {
     display: flex;
 }
 
