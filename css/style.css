@@ -1459,7 +1459,7 @@ input[type="search"]:focus+.search-button {
 
 .page-navigation-wrapper {
     padding: 0 60px;
-    margin-bottom: 45px;
+    margin-bottom: 23px;
 }
 
 .page-title {
@@ -1517,7 +1517,8 @@ input[type="search"]:focus+.search-button {
 .inner-container {
     display: flex;
 
-    margin-bottom: 50px;
+    padding-top: 22px;
+    padding-bottom: 50px;
 }
 
 .filter {
@@ -1569,6 +1570,14 @@ input[type="search"]:focus+.search-button {
 
 .filter-item-price {
     margin: 0 0 50px 0;
+}
+
+.filter-price {
+
+    width: 200px;
+    height: 2px;
+
+    background: #91c92f;
 }
 
 .filter-color-list {
@@ -1634,11 +1643,11 @@ input[type="search"]:focus+.search-button {
     opacity: 0.25;
 }
 
-.filter-checkbox:hover + label .custom-checkbox{
+.filter-checkbox:hover + label .custom-checkbox {
     opacity: 0.6;
 }
 
-.filter-checkbox:active + label {
+.filter-checkbox:active + label .custom-checkbox {
     opacity: 1;
 }
 
@@ -1691,6 +1700,9 @@ input[type="search"]:focus+.search-button {
     opacity: 0.6;
 }
 
+.filter-radio:active + label .custom-radio {
+    opacity: 1;
+}
 
 .filter-button {
     position: relative;
@@ -1817,6 +1829,41 @@ input[type="search"]:focus+.search-button {
     width: 360px;
 }
 
+.catalog-item-new::before {
+    content: "new";
+
+    position: absolute;
+    z-index: 10;
+    top: 46px;
+    right: 40px;
+    opacity: 0.2;
+
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.catalog-item-new::after {
+    content: "";
+
+    position: absolute;
+    z-index: 10;
+    top: 29px;
+    right: 27px;
+    opacity: 0.2;
+
+    width: 60px;
+    height: 60px;
+
+    border: 2px solid #000000;
+    border-radius: 50%;
+}
 .catalog-item:nth-last-child(1),
 .catalog-item:nth-last-child(2) {
     margin-bottom: 35px;
@@ -1991,7 +2038,8 @@ input[type="search"]:focus+.search-button {
 .catalog-wrapper::after {
     content: "";
     position: absolute;
-    top: -22px;
+    top: 0;
+    z-index: -5;
 
     width: 100%;
     height: 70px;
@@ -2003,12 +2051,12 @@ input[type="search"]:focus+.search-button {
 
     box-sizing: border-box;
     position: absolute;
-    top: -22px;
+    top: 0;
     right: calc(50% + 252px);
     z-index: -5;
 
     width: 100%;
-    height: calc(100% + 72px);
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.08);
 
 }
