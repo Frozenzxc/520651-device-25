@@ -1,17 +1,17 @@
 @font-face {
     font-family: "Open Sans";
     src: url("../fonts/opensans.woff2") format('woff2'),
-         url("../fonts/opensans.woff") format('woff');
+    url("../fonts/opensans.woff") format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-      font-family: "Open Sans";
-      src: url("../fonts/opensanslight.woff2") format('woff2'),
-      url("../fonts/opensanslight.woff") format('woff');
-      font-weight: 300;
-      font-style: normal;
+    font-family: "Open Sans";
+    src: url("../fonts/opensanslight.woff2") format('woff2'),
+    url("../fonts/opensanslight.woff") format('woff');
+    font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
@@ -670,17 +670,17 @@ input[type="search"]:focus+.search-button {
 }
 
 .main-categories-item:nth-child(1) .main-categories-link::before {
-     content: "";
-     top: 0;
+    content: "";
+    top: 0;
 
-     position: absolute;
+    position: absolute;
 
-     width: 160px;
-     height: 160px;
-     background:
-             url("../img/popular-1.svg") center no-repeat,
-             #f7e296;
- }
+    width: 160px;
+    height: 160px;
+    background:
+            url("../img/popular-1.svg") center no-repeat,
+            #f7e296;
+}
 
 .main-categories-item:nth-child(2) .main-categories-link::before {
     content: "";
@@ -1033,7 +1033,6 @@ input[type="search"]:focus+.search-button {
 .site-footer {
     width: 100%;
 
-    margin-top: 50px;
     padding-bottom: 67px;
     background-color: #464646;
 }
@@ -1438,6 +1437,7 @@ input[type="search"]:focus+.search-button {
 
 .modal-map {
     margin: 0;
+    box-shadow: none;
 }
 
 .modal-overlay {
@@ -1516,6 +1516,8 @@ input[type="search"]:focus+.search-button {
 
 .inner-container {
     display: flex;
+
+    margin-bottom: 50px;
 }
 
 .filter {
@@ -1984,7 +1986,6 @@ input[type="search"]:focus+.search-button {
 
 .catalog-wrapper {
     position: relative;
-
 }
 
 .catalog-wrapper::after {
@@ -1999,12 +2000,15 @@ input[type="search"]:focus+.search-button {
 
 .catalog-wrapper::before {
     content: "";
+
+    box-sizing: border-box;
     position: absolute;
     top: -22px;
-    /*left: -860px;*/
+    right: calc(50% + 252px);
+    z-index: -5;
 
-
-
-    height: 100%;
+    width: 100%;
+    height: calc(100% + 72px);
     background-color: rgba(0, 0, 0, 0.08);
+
 }
