@@ -104,10 +104,17 @@
           <form id="filter" action="https://echo.htmlacademy.ru" method="post" name="filter">
               <h2 class="filter-title">Фильтр:</h2>
               <h3 class="filter-item-title">Стоимость</h3>
-                <p class="filter-item-price">
-                    <input type="range" name="price" min="0" max="10000" step="100" class="filter-price" id="price" form="filter">
-                    <label class="visually-hidden" for="price">Фильтр по цене</label>
-                </p>
+                <div class="range-controls">
+                  <div class="scale">
+                      <div class="bar"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
+              </div>
+                <div class="price-controls">
+                  <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                  <label class="max-price">до <input type="text" name="max-price" value="5000"></label>
+              </div>
               <h3 class="filter-item-title">Цвет</h3>
                 <ul class="filter-color-list">
                     <li class="filter-color-item">
