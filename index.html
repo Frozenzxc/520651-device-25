@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="main-header">
@@ -91,8 +91,10 @@
       <section class="promo-slider container">
         <h2 class="visually-hidden">Промо-товары</h2>
         <ul class="slider-list">
-          <li class="slider-item">
+          <li class="slider-item slider-item-active">
+            <div class="slider-img-container">
             <img src="img/slider-1.png" width="384" height="486" alt="Фото самой длинной палки для селфи">
+            </div>
             <span class="slider-item-count">01</span>
             <div class="slider-wrapper">
             <p class="slider-item-slogan">
@@ -119,8 +121,11 @@
             </div>
           </li>
           <li class="slider-item">
+            <div class="slider-img-container">
             <img src="img/slider-2.png" width="345" height="485" alt="Фото мотивирующего фитнес-браслета">
-            <span class="slider-item-count">02</span>
+            </div>
+              <span class="slider-item-count">02</span>
+            <div class="slider-wrapper">
             <p class="slider-item-slogan">
                 Худеем<br>
                 правильно!
@@ -138,10 +143,14 @@
                 <td>48 часов</td>
               </tr>
             </table>
+            </div>
           </li>
           <li class="slider-item">
+            <div class="slider-img-container">
             <img src="img/slider-3.png" width="526" height="334" alt="Фото квадрокоптера">
-            <span class="slider-item-count">03</span>
+            </div>
+              <span class="slider-item-count">03</span>
+            <div class="slider-wrapper">
             <p class="slider-item-slogan">
                 Порхает как бабочка,<br>
                 жалит как пчела!
@@ -161,21 +170,22 @@
                 <td>50 м</td>
               </tr>
             </table>
+            </div>
           </li>
         </ul>
         <ul class="slider-counter">
           <li class="counter-item">
-            <button class="counter-btn counter-btn-active" type="button" aria-label="Выбрать первый слайд">
+            <button class="counter-btn counter-btn-active" data-id="0" type="button" aria-label="Выбрать первый слайд">
               Слайд №1
             </button>
           </li>
           <li class="counter-item">
-            <button class="counter-btn" type="button" aria-label="Выбрать второй слайд">
+            <button class="counter-btn" data-id="1"  type="button" aria-label="Выбрать второй слайд">
               Слайд №2
             </button>
           </li>
           <li class="counter-item">
-            <button class="counter-btn" type="button" aria-label="Выбрать третий слайд">
+            <button class="counter-btn" data-id="2"  type="button" aria-label="Выбрать третий слайд">
               Слайд №3
             </button>
           </li>
@@ -221,17 +231,17 @@
         <h2 class="visually-hidden">Услуги</h2>
           <ul class="main-services-list">
             <li class="main-services-item">
-              <button class="main-services-link button" type="button">Доставка</button>
+              <button class="main-services-link button main-services-link-active" data-id="0" type="button">Доставка</button>
             </li>
             <li class="main-services-item">
-              <button class="main-services-link button" type="button">Гарантия</button>
+              <button class="main-services-link button" data-id="1" type="button">Гарантия</button>
             </li>
             <li class="main-services-item">
-              <button class="main-services-link button" type="button">Кредит</button>
+              <button class="main-services-link button" data-id="2" type="button">Кредит</button>
             </li>
           </ul>
           <ul class="services-description">
-            <li class="services-description-item">
+            <li class="services-description-item services-description-item-active">
               <h3 class="services-title">Доставка</h3>
               <p class="services-text">
                 Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
@@ -393,7 +403,7 @@
   </section>
   <section class="modal-map modal modal-close" id="modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <iframe src="https://yandex.ru/map-widget/v1/-/CCqg7Djf" width="994" height="593" frameborder="1" allowfullscreen="true"></iframe>
+    <iframe src="https://yandex.ru/map-widget/v1/-/CCqg7Djf" width="994" height="593"></iframe>
     <p>
       <img src="img/map-modal.jpg" width="994" height="593" alt="Офис компании по адресу г. Москва, ул. Строителей, 15">
     </p>
@@ -403,6 +413,6 @@
   </section>
     <div class="modal-overlay modal-close" id="modal-letter-overlay"></div>
     <div class="modal-overlay modal-close" id="modal-map-overlay"></div>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
   </body>
 </html>
