@@ -15,11 +15,11 @@
   </a>
   <div class="main-header-wrapper">
     <div class="user-navigation-wrapper">
-      <p class="main-header-search">
+      <form class="main-header-search" method="get" id="main-header-search" action="https://echo.htmlacademy.ru" name="header-search">
         <label class="visually-hidden" for="search">Поиск по сайту</label>
-        <input type="search" class="search-input" name="search" placeholder="Поиск по сайту" id="search">
-        <button class="search-button" type="button">Найти</button>
-      </p>
+        <input type="search" class="search-input" name="search" placeholder="Поиск по сайту" id="search" form="main-header-search">
+        <button class="search-button" type="submit" form="main-header-search">Найти</button>
+      </form>
       <div class="user-navigation-container">
         <ul class="user-navigation">
           <li class="user-navigation-item">

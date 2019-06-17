@@ -951,6 +951,7 @@ input[type="search"]:focus+.search-button {
 }
 .site-footer {
     width: 100%;
+    min-width: 1180px;
     padding-bottom: 67px;
     background-color: #464646;
 }
@@ -1711,6 +1712,16 @@ input[type="search"]:focus+.search-button {
 .sort-priority-item {
     opacity: 0.2;
 }
+
+.sort-priority-item:hover,
+.sort-priority-item:focus {
+    opacity: 0.4;
+}
+
+.sort-priority-item:active {
+    opacity: 1;
+}
+
 .sort-priority-item:nth-child(1) {
     margin-right: 19px;
 }
